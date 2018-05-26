@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const models = require('./models');
 const expressGraphQL = require('express-graphql');
@@ -12,7 +13,7 @@ const schema = require('./schema/schema');
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = '';
+const MONGO_URI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@ds237120.mlab.com:37120/graphql-auth`;
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;

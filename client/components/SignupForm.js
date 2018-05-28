@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AuthForm from './AuthForm'
 import mutation from '../mutations/Signup'
 import query from '../queries/CurrentUser'
+import { hashHistory } from 'react-router'
 
 import { graphql } from 'react-apollo'
 
